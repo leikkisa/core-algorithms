@@ -7,47 +7,16 @@ describe('factorial()', function(){
     expect(factorial).to.be.a('function')
   })
 
-  it('returns an object with all coin types (quarters, dimes, nickels, and pennies)', function(){
-    const change = factorial({price: 100, amountGiven: 100})
-    expect(change).to.be.an('object')
-    expect(change).to.have.keys('quarters', 'dimes', 'nickels', 'pennies')
-    expect(change).to.deep.equal({
-      quarters: 0,
-      dimes: 0,
-      nickels: 0,
-      pennies: 0,
-    })
+  it('Return factorial of a number',
+    expect(factorial(5)).to.equal(120)
   })
 
-  it('returns correct change', function(){
-    expect(factorial({price: 100, amountGiven: 141})).to.deep.equal({
-      quarters: 1,
-      dimes: 1,
-      nickels: 1,
-      pennies: 1,
-    })
+  it('factorial of zero',
+    expect(factorial(0)).to.equal(0)
   })
 
-  it('minimizes the number of coins given by using the most high-value coins', function(){
-    expect(factorial({price: 100, amountGiven: 168})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 3,
-    })
-
-    expect(factorial({price: 100, amountGiven: 169})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 4,
-    })
-
-    expect(factorial({price: 100, amountGiven: 170})).to.deep.equal({
-      quarters: 2,
-      dimes: 2,
-      nickels: 0,
-      pennies: 0,
-    })
+  it('factorial of 10',
+    expect(factorial(0)).to.equal(3628800)
   })
+
 })
