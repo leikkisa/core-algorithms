@@ -19,35 +19,8 @@ describe('fibonacci()', function(){
     })
   })
 
-  it('returns correct change', function(){
-    expect(fibonacci({price: 100, amountGiven: 141})).to.deep.equal({
-      quarters: 1,
-      dimes: 1,
-      nickels: 1,
-      pennies: 1,
-    })
+  it('returns fibonacci', function(){
+    expect(fibonacci(10)).to.equal([0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
   })
 
-  it('minimizes the number of coins given by using the most high-value coins', function(){
-    expect(fibonacci({price: 100, amountGiven: 168})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 3,
-    })
-
-    expect(fibonacci({price: 100, amountGiven: 169})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 4,
-    })
-
-    expect(fibonacci({price: 100, amountGiven: 170})).to.deep.equal({
-      quarters: 2,
-      dimes: 2,
-      nickels: 0,
-      pennies: 0,
-    })
-  })
 })
