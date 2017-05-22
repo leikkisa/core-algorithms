@@ -1,10 +1,9 @@
-export default function factorial({price, amountGiven}) {
-  // your code here
+export default function factorial(number) {
+  let result = number
+  while (number > 1) {
+    result *= (number - 1)
+    number = number - 1
+  }
+  return result
+  }
 }
-
-Return the factorial of a number.
-
-```javascript
-factorial(5)
-// => 120
-```
