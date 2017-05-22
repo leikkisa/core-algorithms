@@ -1,13 +1,7 @@
-export default function setUnion({price, amountGiven}) {
-  // your code here
+//Returns the union of two sets.
+
+export default function setUnion(a,b) {
+  return a.concat(b).sort().filter(function(item, pos, arr) {
+        return !pos || item != arr[pos - 1];
+    })
 }
-#### setUnion
-
-Return the union of two sets.
-
-```javascript
-const a = [1, 2, 3, 4]
-const b = [2, 4, 6, 8]
-setUnion(a, b)
-// => [1, 2, 3, 4, 6, 8]
-```
