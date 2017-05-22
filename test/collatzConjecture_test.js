@@ -7,47 +7,12 @@ describe('collatzConjecture()', function(){
     expect(collatzConjecture).to.be.a('function')
   })
 
-  it('returns an object with all coin types (quarters, dimes, nickels, and pennies)', function(){
-    const change = collatzConjecture({price: 100, amountGiven: 100})
-    expect(change).to.be.an('object')
-    expect(change).to.have.keys('quarters', 'dimes', 'nickels', 'pennies')
-    expect(change).to.deep.equal({
-      quarters: 0,
-      dimes: 0,
-      nickels: 0,
-      pennies: 0,
-    })
+  it('returns collatz conjecture', function(){
+    expect(collatzConjecture(7)).to.equal([7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1])
   })
 
-  it('returns correct change', function(){
-    expect(collatzConjecture({price: 100, amountGiven: 141})).to.deep.equal({
-      quarters: 1,
-      dimes: 1,
-      nickels: 1,
-      pennies: 1,
-    })
+  it('returns collatz conjecture of 1', function(){
+    expect(collatzConjecture(1)).to.equal([1])
   })
 
-  it('minimizes the number of coins given by using the most high-value coins', function(){
-    expect(collatzConjecture({price: 100, amountGiven: 168})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 3,
-    })
-
-    expect(collatzConjecture({price: 100, amountGiven: 169})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 4,
-    })
-
-    expect(collatzConjecture({price: 100, amountGiven: 170})).to.deep.equal({
-      quarters: 2,
-      dimes: 2,
-      nickels: 0,
-      pennies: 0,
-    })
-  })
 })
