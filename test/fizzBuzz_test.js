@@ -7,47 +7,20 @@ describe('fizzBuzz()', function(){
     expect(fizzBuzz).to.be.a('function')
   })
 
-  it('returns an object with all coin types (quarters, dimes, nickels, and pennies)', function(){
-    const change = fizzBuzz({price: 100, amountGiven: 100})
-    expect(change).to.be.an('object')
-    expect(change).to.have.keys('quarters', 'dimes', 'nickels', 'pennies')
-    expect(change).to.deep.equal({
-      quarters: 0,
-      dimes: 0,
-      nickels: 0,
-      pennies: 0,
-    })
+  result = fizzBuzz()
+  it('Expect 3rd element to be Fizz)',
+    expect(result[3]).to.equal('Fizz')
   })
 
-  it('returns correct change', function(){
-    expect(fizzBuzz({price: 100, amountGiven: 141})).to.deep.equal({
-      quarters: 1,
-      dimes: 1,
-      nickels: 1,
-      pennies: 1,
-    })
+  it('Expect 5th element to be Buzz)',
+    expect(result[5]).to.equal('Buzz')
   })
 
-  it('minimizes the number of coins given by using the most high-value coins', function(){
-    expect(fizzBuzz({price: 100, amountGiven: 168})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 3,
-    })
+  it('Expect 15th element to be FizzBuzz)',
+    expect(result[15]).to.equal('FizzBuzz')
+  })
 
-    expect(fizzBuzz({price: 100, amountGiven: 169})).to.deep.equal({
-      quarters: 2,
-      dimes: 1,
-      nickels: 1,
-      pennies: 4,
-    })
-
-    expect(fizzBuzz({price: 100, amountGiven: 170})).to.deep.equal({
-      quarters: 2,
-      dimes: 2,
-      nickels: 0,
-      pennies: 0,
-    })
+  it('Expect length to be 100)',
+    expect(result.length).to.equal(100)
   })
 })
