@@ -1,13 +1,10 @@
-export default function setSymmetricDifference({price, amountGiven}) {
-  // your code here
+//Return the symmetric difference of two sets
+
+export default function setSymmetricDifference(a,b) {
+  let result = a.filter(function(x) {
+    return b.indexOf(x) === -1
+  })
+  return result.concat(b.filter(function(x) {
+    return a.indexOf(x) === -1
+  }))
 }
-#### setSymmetricDifference
-
-Return the symmetric difference of two sets.
-
-```javascript
-const a = [1, 2, 3, 4]
-const b = [2, 4, 6, 8]
-setSymmetricDifference(a, b)
-// => [1, 3, 6, 8]
-```
