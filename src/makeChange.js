@@ -14,11 +14,10 @@ export default function makeChange({price, amountGiven}) {
     nickels: 5,
     pennies: 1
   }
-  for (denomination in values) {
+  for (let denomination in values) {
     if (change === 0) {return result}
-    console.log(change)
     result[denomination] = Math.floor(change / values[denomination])
     change = change % values[denomination]
-    console.log(result)
   }
+  return result
 }

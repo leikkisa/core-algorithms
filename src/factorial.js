@@ -5,5 +5,4 @@ export default function factorial(number) {
     number = number - 1
   }
   return result
-  }
 }

@@ -1,13 +1,7 @@
-export default function setComplement({price, amountGiven}) {
-  // your code here
+//Return the complement of two sets, the values that are in array b that are not in array a
+
+export default function setComplement(a,b) {
+  return b.filter(function(x) {
+    return a.indexOf(x) === -1;
+  })
 }
-#### setComplement
-
-Return the complement of two sets.
-
-```javascript
-const a = [1, 2, 3, 4]
-const b = [2, 4, 6, 8]
-setComplement(a, b)
-// => [6, 8]
-```

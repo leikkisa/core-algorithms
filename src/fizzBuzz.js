@@ -18,7 +18,7 @@ export default function fizzBuzz() {
     }
     return result
   }
-  result = Array.apply(null, {length: 100}).map(Number.call, Number)
+  let result = Array.apply(null, {length: 100}).map(Number.call, Number)
   return result.map(function(number) {
    return whichFizzBuzz(number+1)})
 }
