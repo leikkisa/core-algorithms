@@ -6,7 +6,7 @@ Base repository for the [Core Algorithms](http://jsdev.learnersguild.org/goals/1
 
 ## Installation and Setup
 
-To install, copy desired algorithms into your codebase, and tests into your tests folder.  The then use the algorithms, import them into the file that you will be using them in.
+To install, clone the repository, run npm install, and run npm build.  The then use the algorithms, import them into the file that you will be using them in.
 
 ## Usage and Examples
 
