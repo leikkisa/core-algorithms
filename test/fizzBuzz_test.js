@@ -7,20 +7,20 @@ describe('fizzBuzz()', function(){
     expect(fizzBuzz).to.be.a('function')
   })
 
-  result = fizzBuzz()
-  it('Expect 3rd element to be Fizz)',
-    expect(result[3]).to.equal('Fizz')
+  let result = fizzBuzz()
+  it('Expect 3rd element to be Fizz', function(){
+    expect(result[2]).to.equal('Fizz')
   })
 
-  it('Expect 5th element to be Buzz)',
-    expect(result[5]).to.equal('Buzz')
+  it('Expect 5th element to be Buzz', function(){
+    expect(result[4]).to.equal('Buzz')
   })
 
-  it('Expect 15th element to be FizzBuzz)',
-    expect(result[15]).to.equal('FizzBuzz')
+  it('Expect 15th element to be FizzBuzz', function(){
+    expect(result[14]).to.equal('FizzBuzz')
   })
 
-  it('Expect length to be 100)',
+  it('Expect length to be 100', function(){
     expect(result.length).to.equal(100)
   })
 })

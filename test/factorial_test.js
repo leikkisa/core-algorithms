@@ -7,16 +7,16 @@ describe('factorial()', function(){
     expect(factorial).to.be.a('function')
   })
 
-  it('Return factorial of a number',
+  it('Return factorial of a number', function(){
     expect(factorial(5)).to.equal(120)
   })
 
-  it('factorial of zero',
+  it('factorial of zero', function(){
     expect(factorial(0)).to.equal(0)
   })
 
-  it('factorial of 10',
-    expect(factorial(0)).to.equal(3628800)
+  it('factorial of 10', function(){
+    expect(factorial(10)).to.equal(3628800)
   })
 
 })

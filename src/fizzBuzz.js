@@ -4,21 +4,22 @@
 //
 // For numbers which are multiples of both three and five replace with `FizzBuzz`.
 
-export default function fizzBuzz() {
-  function whichFizzBuzz(number){
+export default function fizzBuzz () {
+  function whichFizzBuzz (number) {
     let result = ''
-    if (number % 3 === 0){
+    if (number % 3 === 0) {
       result += 'Fizz'
     }
-    if (number % 5 === 0){
+    if (number % 5 === 0) {
       result += 'Buzz'
     }
-    if (number % 3 * number % 5 > 0){
+    if (number % 3 * number % 5 > 0) {
       result = number
     }
     return result
   }
-  result = Array.apply(null, {length: 100}).map(Number.call, Number)
-  return result.map(function(number) {
-   return whichFizzBuzz(number+1)})
+  let result = Array.apply(null, {length: 100}).map(Number.call, Number)
+  return result.map(function (number) {
+    return whichFizzBuzz(number + 1)
+  })
 }

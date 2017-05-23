@@ -7,20 +7,12 @@ describe('fibonacci()', function(){
     expect(fibonacci).to.be.a('function')
   })
 
-  it('returns an object with all coin types (quarters, dimes, nickels, and pennies)', function(){
-    const change = fibonacci({price: 100, amountGiven: 100})
-    expect(change).to.be.an('object')
-    expect(change).to.have.keys('quarters', 'dimes', 'nickels', 'pennies')
-    expect(change).to.deep.equal({
-      quarters: 0,
-      dimes: 0,
-      nickels: 0,
-      pennies: 0,
-    })
+  it('returns fibonacci', function(){
+    expect(fibonacci(10)).to.eql([0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
   })
 
-  it('returns fibonacci', function(){
-    expect(fibonacci(10)).to.equal([0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
+  it('throws an error for invalid input', function(){
+    expect(() => fibonacci(3.14)).to.throw()
   })
 
 })
