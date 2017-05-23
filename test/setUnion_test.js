@@ -13,4 +13,8 @@ describe('setUnion()', function(){
     expect(setUnion(a, b)).to.eql([ 1, 2, 3, 4, 6, 8 ])
   })
 
+  it('throws an error for invalid input', function(){
+    expect(() => setUnion(3.14)).to.throw()
+  })
+
 })

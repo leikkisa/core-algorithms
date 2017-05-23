@@ -13,4 +13,8 @@ describe('setIntersection()', function(){
     expect(setIntersection(a, b)).to.eql([2, 4])
   })
 
+  it('throws an error for invalid input', function(){
+    expect(() => setIntersection(3.14)).to.throw()
+  })
+
 })

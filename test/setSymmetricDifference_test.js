@@ -13,4 +13,8 @@ describe('setSymmetricDifference()', function(){
     expect(setSymmetricDifference(a, b)).to.eql([1, 3, 6, 8])
   })
 
+  it('throws an error for invalid input', function(){
+    expect(() => setSymmetricDifference(3.14)).to.throw()
+  })
+
 })

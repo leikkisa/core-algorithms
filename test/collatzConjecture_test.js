@@ -15,4 +15,8 @@ describe('collatzConjecture()', function(){
     expect(collatzConjecture(1)).to.eql([ 1 ])
   })
 
+  it('throws an error for invalid input', function(){
+    expect(() => collatzConjecture(-5)).to.throw()
+  })
+
 })

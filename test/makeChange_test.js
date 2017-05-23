@@ -50,4 +50,9 @@ describe('makeChange()', function(){
       pennies: 0,
     })
   })
+
+  it('throws an error for invalid input', function(){
+    expect(() => makeChange({price: 100, amountGiven: "hello"})).to.throw()
+  })
+
 })
